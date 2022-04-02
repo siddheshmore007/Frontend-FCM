@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React, { Component, useState, useEffect } from 'react';
+//import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import PaymentRecordView from './components/PaymentRecordView';
+import Table from './components/Table';
+import NewTable from './components/NewTable';
 
-function App() {
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_ENDPOINT
+})
+
+
+
+class App extends Component {
+  
+  
+  constructor() {
+    super();
+    
+    api.get('/').then(res => {
+      console.log(res.data)
+    })
+  }
+
+  //const [payments, setPayments] = useState([]);
+
+
+  
+
+
+  render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Fee payment Status</h1>
+      <div className="PaymentTable">
+        
+        <NewTable/>
+      </div>
     </div>
   );
+}
 }
 
 export default App;
