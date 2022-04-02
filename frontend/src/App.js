@@ -1,9 +1,8 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import PaymentRecordView from './components/PaymentRecordView';
-import Table from './components/Table';
+
 import NewTable from './components/NewTable';
 
 const api = axios.create({

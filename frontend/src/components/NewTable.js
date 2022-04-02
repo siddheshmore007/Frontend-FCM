@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState }  from "react";
+import React, { Component }  from "react";
 import { 
     Table,
     TableBody,
@@ -12,7 +12,6 @@ import {
     Typography,
     TablePagination,
     TableFooter,
-    Button,
     IconButton,
   } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -20,9 +19,6 @@ import AddPaymentForm from "./AddPaymentForm";
 import axios from "axios";
 
 
-const api = axios.create({
-  baseURL: process.env.REACT_APP_API_ENDPOINT
-})
 
 
 

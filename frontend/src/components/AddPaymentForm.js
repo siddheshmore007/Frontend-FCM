@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Grid, TextField } from '@material-ui/core';
 //import { makeStyles } from '@mui/styles';
 import axios from 'axios';
@@ -25,7 +25,6 @@ const initialValues = {
 
 
 function AddPaymentForm() {
-    const [payment, setPayment] = useState([{}]);
     //const classes = useStyle();
     const [studentId, setStudentId] = useState('');
     const [name, setName] = useState('');
